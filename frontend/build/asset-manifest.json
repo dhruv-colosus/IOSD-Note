@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.15ecbe1a.chunk.css",
+    "main.js": "/static/js/main.ad38976e.chunk.js",
+    "main.js.map": "/static/js/main.ad38976e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ff5b8ea4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ff5b8ea4.js.map",
+    "static/js/2.598f4e19.chunk.js": "/static/js/2.598f4e19.chunk.js",
+    "static/js/2.598f4e19.chunk.js.map": "/static/js/2.598f4e19.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.15ecbe1a.chunk.css.map": "/static/css/main.15ecbe1a.chunk.css.map",
+    "static/js/2.598f4e19.chunk.js.LICENSE.txt": "/static/js/2.598f4e19.chunk.js.LICENSE.txt",
+    "static/media/dance.6430ebc5.gif": "/static/media/dance.6430ebc5.gif",
+    "static/media/fortnite-dance.22b8422f.gif": "/static/media/fortnite-dance.22b8422f.gif",
+    "static/media/notes.7c831644.png": "/static/media/notes.7c831644.png",
+    "static/media/notess.84ba53e1.png": "/static/media/notess.84ba53e1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff5b8ea4.js",
+    "static/js/2.598f4e19.chunk.js",
+    "static/css/main.15ecbe1a.chunk.css",
+    "static/js/main.ad38976e.chunk.js"
+  ]
+}
