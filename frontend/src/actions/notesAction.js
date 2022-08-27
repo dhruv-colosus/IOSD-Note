@@ -39,7 +39,7 @@ export const listNotes = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:4000/api/notes`, config);
+    const { data } = await axios.get(`/api/notes`, config);
 
     dispatch({
       type: NOTES_LIST_SUCCESS,
@@ -69,10 +69,7 @@ export const getSingleNote = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(
-      `http://localhost:4000/api/notes/${id}`,
-      config
-    );
+    const { data } = await axios.get(`/api/notes/${id}`, config);
 
     dispatch({
       type: NOTE_GET_SUCCESS,
@@ -109,7 +106,7 @@ export const createNoteAction =
       };
 
       const { data } = await axios.post(
-        `http://localhost:4000/api/notes/create`,
+        `/api/notes/create`,
         { title, content, category },
         config
       );
@@ -140,9 +137,7 @@ export const shareNoteAction = (id) => async (dispatch) => {
     //   userLogin: { userInfo },
     // } = getState();
 
-    const { data } = await axios.get(
-      `http://localhost:4000/api/notes/share/${id}`
-    );
+    const { data } = await axios.get(`/api/notes/share/${id}`);
 
     dispatch({
       type: NOTE_SHARE_SUCCESS,
@@ -179,7 +174,7 @@ export const updateNoteAction =
       };
 
       const { data } = await axios.put(
-        `http://localhost:4000/api/notes/${id}`,
+        `/api/notes/${id}`,
         { title, content, category },
         config
       );
@@ -216,10 +211,7 @@ export const deleteNoteAction = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete(
-      `http://localhost:4000/api/notes/${id}`,
-      config
-    );
+    const { data } = await axios.delete(`/api/notes/${id}`, config);
 
     dispatch({
       type: NOTES_DELETE_SUCCESS,
@@ -253,11 +245,7 @@ export const isShare = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const {} = await axios.put(
-      `http://localhost:4000/api/notes/share/${id}`,
-      {},
-      config
-    );
+    const {} = await axios.put(`/api/notes/share/${id}`, {}, config);
     dispatch({
       type: SHARE_SUCCESS,
     });
