@@ -36,8 +36,8 @@ function MyNotes({ search }) {
     success: successDelete,
   } = noteDelete;
 
-  const willShare = useSelector((state) => state.isShare);
-  const { success } = isShare;
+  // const willShare = useSelector((state) => state.isShare);
+  // const { success } = isShare;
 
   const handleClose = () => setShow(false);
   const handleShow = (id) => {

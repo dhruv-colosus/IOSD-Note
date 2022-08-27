@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Card, Button, Form } from "react-bootstrap";
-import axios from "axios";
 
 import Loading from "./Loading";
 import ErrorMessage from "./ErrorMessage";
@@ -25,7 +24,7 @@ function SingleNote() {
   const noteUpdate = useSelector((state) => state.noteUpdate);
   const { loading, error } = noteUpdate;
   const noteGet = useSelector((state) => state.noteGet);
-  const { data, error: error2 } = noteGet;
+  const { data } = noteGet;
 
   const resetHandler = () => {
     setContent("");
@@ -48,10 +47,10 @@ function SingleNote() {
       // );
       await dispatch(getSingleNote(id.id));
       console.log(data);
-      setContent(data != undefined ? data.content : "");
-      setCategory(data != undefined ? data.category : "");
-      setTitle(data != undefined ? data.title : "");
-      setDate(data != undefined ? data.updatedAt : "");
+      setContent(data !== undefined ? data.content : "");
+      setCategory(data !== undefined ? data.category : "");
+      setTitle(data !== undefined ? data.title : "");
+      setDate(data !== undefined ? data.updatedAt : "");
     };
 
     fetching();

@@ -3,7 +3,6 @@ import "./ShareNote.css";
 import { useParams } from "react-router-dom";
 import dance from "../images/dance.gif";
 import dance2 from "../images/fortnite-dance.gif";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { shareNoteAction } from "../actions/notesAction";
 
@@ -19,7 +18,7 @@ function ShareNote() {
   const dispatch = useDispatch();
 
   const shareNote = useSelector((state) => state.shareNote);
-  const { data, loading, error } = shareNote;
+  const { data } = shareNote;
 
   useEffect(() => {
     const fetching = async () => {
@@ -30,10 +29,10 @@ function ShareNote() {
       await dispatch(shareNoteAction(id.id));
 
       setNote(data);
-      setContent(data != undefined ? data.content : "");
-      setCategory(data != undefined ? data.category : "");
-      setTitle(data != undefined ? data.title : "");
-      setDate(data != undefined ? data.updatedAt : "");
+      setContent(data !== undefined ? data.content : "");
+      setCategory(data !== undefined ? data.category : "");
+      setTitle(data !== undefined ? data.title : "");
+      setDate(data !== undefined ? data.updatedAt : "");
 
       console.log(data);
     };

@@ -12,7 +12,6 @@ import {
   NOTES_LIST_REQUEST,
   NOTES_LIST_SUCCESS,
   NOTE_GET_FAIL,
-  NOTE_GET_REQUEST,
   NOTE_GET_SUCCESS,
   NOTE_SHARE_FAIL,
   NOTE_SHARE_SUCCESS,
@@ -245,7 +244,7 @@ export const isShare = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const {} = await axios.put(`/api/notes/share/${id}`, {}, config);
+    const { data } = await axios.put(`/api/notes/share/${id}`, {}, config);
     dispatch({
       type: SHARE_SUCCESS,
     });
