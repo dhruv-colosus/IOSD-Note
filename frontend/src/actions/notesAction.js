@@ -259,3 +259,6 @@ export const isShare = (id) => async (dispatch, getState) => {
     });
   }
 };
+
+
+    // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
