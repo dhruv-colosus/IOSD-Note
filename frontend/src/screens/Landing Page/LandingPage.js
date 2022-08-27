@@ -16,10 +16,10 @@ function LandingPage() {
   return (
     <div className="land">
       <div className="land_left">
-        <h2>Welcome to SafeNote !</h2>
+        <h2>Welcome to IOSDNote !</h2>
         <p>
-          Store your Notes in one of the Safest Online Notes Provider and
-          retrieve them in a go. Build on MERN stack , this is one of the
+          Store and Share your Notes in one of the Safest Online Notes Provider
+          and retrieve them in a go. Build on MERN stack , this is one of the
           fastest Notes Provider.
         </p>
         <div className="land_btns">

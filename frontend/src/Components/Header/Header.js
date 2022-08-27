@@ -39,7 +39,7 @@ function Header({ setSearch }) {
               style={{ width: "1.6rem", marginRight: "10px" }}
               alt="n"
             />
-            Safe Note
+            IOSD Note
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
