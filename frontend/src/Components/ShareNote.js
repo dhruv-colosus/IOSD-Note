@@ -20,6 +20,18 @@ function ShareNote() {
   const shareNote = useSelector((state) => state.shareNote);
   const { data } = shareNote;
 
+  const [copied, setCopied] = useState(false);
+
+  function copy() {
+    const el = document.createElement("input");
+    el.value = window.location.href;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    setCopied(true);
+  }
+
   useEffect(() => {
     const fetching = async () => {
       // const { data } = await axios.get(
@@ -47,6 +59,9 @@ function ShareNote() {
           <h1>{title}</h1>
           <h3>{category}</h3>
           <p>{content}</p>
+          <div className="App_button">
+            <button onClick={copy}>{!copied ? "Copy link" : "Copied!"}</button>
+          </div>
         </div>
       ) : (
         <div className="not-auth">
