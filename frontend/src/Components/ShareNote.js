@@ -66,7 +66,7 @@ function ShareNote() {
       ) : (
         <div className="not-auth">
           <div className="dance-div">
-            <h1>NOT AUTHORISED LMAO</h1>
+            <h1>NOT AUTHORISED LMAO HAHA</h1>
             <h4>Make Note Public First</h4>
             <img src={dance} alt="Lol Not Auth" />
             <img src={dance2} alt="Lol Not Auth 2" />
